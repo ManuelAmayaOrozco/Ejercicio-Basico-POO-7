@@ -1,10 +1,13 @@
 class Persona (dni: String) {
 
     val listaCuentas = arrayOfNulls<Cuenta>(3)
+    private var numeroDeCuentas = 0
 
     fun nuevaCuenta(cuenta: Cuenta) {
-        var cuentaVacia = listaCuentas.filter { it == null}
-        
+        if (LIMITE_CUENTAS != numeroDeCuentas) {
+            listaCuentas[numeroDeCuentas] = cuenta
+            numeroDeCuentas++
+        }
     }
 
     companion object {
