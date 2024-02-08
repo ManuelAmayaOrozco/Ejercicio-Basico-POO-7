@@ -1,5 +1,15 @@
 fun main(args: Array<String>) {
-    /*usa private set en el saldo, arrayOfNulls para persona, companion object con constante total cuentas
-    usa .filter para encontrar las cuentas*/
+    val persona = Persona("Hola")
 
+    val cuenta1 = Cuenta(1, 0.0)
+    val cuenta2 = Cuenta(2, 700.0)
+
+    persona.nuevaCuenta(cuenta1)
+    persona.nuevaCuenta(cuenta2)
+
+    cuenta1.recibirAbono(1100.0)
+    cuenta2.realizarPago(750.0)
+    persona.esMorosa(persona)
+
+    persona.transferencia(persona, 1, 2, 100.0)
 }

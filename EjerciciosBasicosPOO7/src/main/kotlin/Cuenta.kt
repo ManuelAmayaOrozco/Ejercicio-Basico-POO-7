@@ -1,7 +1,6 @@
 class Cuenta(val numero: Int, saldo: Double = 0.0) {
 
     var saldo = saldo
-    private set
 
     /**
      * Función consultarSaldo
